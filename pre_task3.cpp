@@ -27,8 +27,8 @@ int main(void)
 	{
 		cout << ans[i] << endl;
 	}
-	delete []inut_number;
-	delete []ans;
+	delete[] inut_number;
+	delete[] ans;
 }
 int is_magicnum(int num)
 {
@@ -61,8 +61,10 @@ int is_magicnum(int num)
 		right_sum -= temp_array[i];
 		if (left_sum == right_sum)
 		{
+			delete[] temp_array;
 			return 1;
 		}
 	}
+	delete[] temp_array;
 	return 0;
 }
